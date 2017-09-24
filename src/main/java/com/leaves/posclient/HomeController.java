@@ -1,10 +1,9 @@
-package com.leaves.posclient;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.leaves.posclient;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -24,7 +25,9 @@ import javafx.stage.StageStyle;
  *
  * @author Rusiru
  */
-public class SignInController implements Initializable {
+public class HomeController implements Initializable {
+    
+    @FXML ImageView btnExit,btnSignOut;
 
     /**
      * Initializes the controller class.
@@ -35,20 +38,18 @@ public class SignInController implements Initializable {
     }    
     
     @FXML
-    private void btnExitAction(ActionEvent event) throws Exception{
+    private void btnExitAction(MouseEvent event) throws Exception{
         System.exit(0);
     }
-    
     @FXML
-    private void btnSignInAction(ActionEvent event) throws Exception{
+    private void btnSignOutAction(MouseEvent event) throws Exception{
         Stage stage = new Stage();
         ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml")); 
+        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/SignIn.fxml")); 
         Scene scene = new Scene(parent);
-        stage.initStyle(StageStyle.TRANSPARENT);
-        scene.setFill(Color.TRANSPARENT);
+        stage.initStyle(StageStyle.UNDECORATED);       
         stage.setScene(scene);
-        stage.show();
+        stage.show();;
     }
     
 }

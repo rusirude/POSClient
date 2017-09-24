@@ -5,6 +5,7 @@ import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -16,9 +17,7 @@ public class MainApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/SignIn.fxml"));
         
         Scene scene = new Scene(root);
-        
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setTitle("Login");
+        stage.initStyle(StageStyle.UNDECORATED);       
         stage.setScene(scene);
 
         stage.show();
