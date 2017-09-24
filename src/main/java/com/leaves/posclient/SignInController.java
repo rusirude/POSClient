@@ -8,6 +8,8 @@ package com.leaves.posclient;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -24,5 +26,10 @@ public class SignInController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void btnExitAction(ActionEvent event) throws Exception{
+        System.exit(0);
+    }
     
 }

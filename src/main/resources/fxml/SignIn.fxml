@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,9 +11,60 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.leaves.posclient.SignInController">
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="295.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaves.posclient.SignInController">
    <children>
-      <JFXButton layoutX="335.0" layoutY="317.0" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #45AB22;" text="jjjj" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="472.0" stroke="#ffffff04" strokeType="INSIDE" width="325.0">
+         <fill>
+            <LinearGradient endX="0.380952380952381" endY="1.0" startX="0.6047619047619047" startY="0.6619047619047618">
+               <stops>
+                  <Stop color="#005ce6" />
+                  <Stop color="#005ce6" offset="0.5019157088122606" />
+                  <Stop color="WHITE" offset="0.5019157088122606" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Circle fill="WHITE" layoutX="163.0" layoutY="70.0" radius="55.0" stroke="WHITE" strokeType="INSIDE" />
+      <ImageView fitHeight="110.0" fitWidth="101.0" layoutX="113.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/defaultProfile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="29.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/username.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="27.0" layoutX="33.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <JFXTextField focusColor="WHITE" layoutX="65.0" layoutY="237.0" prefHeight="25.0" prefWidth="230.0" promptText="UserName" style="-fx-text-fill: #FFFFFF;" unFocusColor="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField focusColor="WHITE" layoutX="65.0" layoutY="284.0" prefHeight="25.0" prefWidth="230.0" promptText="Password" style="-fx-text-fill: #FFFFFF;" unFocusColor="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="33.0" layoutY="484.0" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #005ce6; -fx-background-radius: 20;" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" layoutX="187.0" layoutY="484.0" onAction="#btnExitAction" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #005ce6; -fx-background-radius: 20;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="33.0" layoutY="157.0" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="49.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
