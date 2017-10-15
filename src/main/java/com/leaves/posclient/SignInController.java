@@ -43,9 +43,9 @@ public class SignInController implements Initializable {
     private void btnSignInAction(ActionEvent event) throws Exception{
         Stage stage = new Stage();
         ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml")); 
+        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Dashboard.fxml")); 
         Scene scene = new Scene(parent);
-        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT); 
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.show();

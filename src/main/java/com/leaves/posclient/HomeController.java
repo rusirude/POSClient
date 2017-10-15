@@ -5,6 +5,7 @@
  */
 package com.leaves.posclient;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -27,7 +29,9 @@ import javafx.stage.StageStyle;
  */
 public class HomeController implements Initializable {
     
-    @FXML ImageView btnExit,btnSignOut;
+    @FXML ImageView btnExit,btnSignOut,btnMenu;
+    @FXML AnchorPane operationPane,salePane,dashboardPane;
+    @FXML JFXButton btnSale;
 
     /**
      * Initializes the controller class.
@@ -50,6 +54,21 @@ public class HomeController implements Initializable {
         stage.initStyle(StageStyle.UNDECORATED);       
         stage.setScene(scene);
         stage.show();;
+    }
+    @FXML
+    private void btnMenuAction(MouseEvent event) throws Exception{
+        if(operationPane.isVisible()){
+            operationPane.setVisible(false);           
+        }
+        else{
+            operationPane.setVisible(true);  
+        }        
+    }
+    @FXML void btnSaleAction(ActionEvent event) throws Exception{        
+        dashboardPane.setVisible(false);        
+        salePane.setVisible(true);
+        dashboardPane.toBack();
+        salePane.toFront();       
     }
     
 }

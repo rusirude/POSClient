@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="1345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaves.posclient.HomeController">
+   <children>
+       <AnchorPane fx:id="operationPane" layoutX="51.0" prefHeight="656.0" prefWidth="1294.0" style="-fx-background-color: #FFF000;">
+         <children>
+                      <AnchorPane fx:id="returnPane" layoutX="-1.0" layoutY="-2.0" prefHeight="656.0" prefWidth="1297.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                      <AnchorPane fx:id="salePane" layoutX="-4.0" prefHeight="656.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <AnchorPane fx:id="optionAreaPane" prefHeight="92.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="1.0" layoutY="-1.0" prefHeight="92.0" prefWidth="650.5" style="-fx-background-color: #005ce6;" text="Barcode" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="71.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/barcodeW.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="651.0" layoutY="3.0" prefHeight="92.0" prefWidth="650.5" text="Manually" textFill="#005ce6">
+                                 <graphic>
+                                    <ImageView fitHeight="75.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/posTerminalC.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="barCodeSalePane" layoutY="92.0" prefHeight="564.0" prefWidth="860.0" style="-fx-background-color: #000000;" />
+                        <AnchorPane fx:id="billPane" layoutX="860.0" layoutY="92.0" prefHeight="564.0" prefWidth="441.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #005ce6; -fx-border-width: 3;" />
+                        <AnchorPane fx:id="normalSalePane" layoutY="92.0" prefHeight="564.0" prefWidth="860.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #005ce6; -fx-border-width: 3;" />
+                     </children>
+                  </AnchorPane>               
+                      <AnchorPane fx:id="dashboardPane" layoutX="-5.0" prefHeight="656.0" prefWidth="1301.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <JFXButton fx:id="btnSale" buttonType="RAISED" contentDisplay="TOP" layoutX="73.0" layoutY="61.0" onAction="#btnSaleAction" prefHeight="121.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #005ce6; -fx-border-width: 3px; -fx-border-radius: 3px;" text="Sales" textFill="#005ce6">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="88.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sales.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="347.0" layoutY="61.0" prefHeight="121.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #005ce6; -fx-border-width: 3px; -fx-border-radius: 3px;" text="Return" textFill="#005ce6">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="88.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/return.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+                 </children>
+             </AnchorPane>      
+      <AnchorPane layoutX="-2.0" prefHeight="656.0" prefWidth="41.0" style="-fx-background-color: #005ce6;">
+               <children>
+                  <ImageView fx:id="btnExit" fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="609.0" onMousePressed="#btnExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/exit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btnSignOut" fitHeight="27.0" fitWidth="25.0" layoutX="13.0" layoutY="63.0" onMousePressed="#btnSignOutAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profile.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="8.0" layoutY="566.0" onMousePressed="#btnExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/minimize.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btnMenu" fitHeight="27.0" fitWidth="25.0" layoutX="9.0" layoutY="523.0" onMousePressed="#btnMenuAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/menu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+      
+         </children>
+      </AnchorPane>
